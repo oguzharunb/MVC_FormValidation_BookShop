@@ -4,12 +4,12 @@ namespace MVC_FormValidation_BookShop.Models
 {
     public class Book
     {
-        [Required(ErrorMessage = "Kitap adı alanı boş geçilemez")]
+        [Required(ErrorMessage = "Kitap Adı alanı boş geçilemez")]
         [Display(Name = "Kitabın İsmi")]
         [MinLength(5),MaxLength(50)]
         public string? BookName { get; set; }
 
-        [Required(ErrorMessage = "Yazar adı lanı boş geçilemez")]
+        [Required(ErrorMessage = "Yazar Adı alanı boş geçilemez")]
         [Display(Name = "Yazarı")]
         [MinLength(5),MaxLength(50)]
         public string? Author { get; set; }
