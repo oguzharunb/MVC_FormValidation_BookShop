@@ -1,0 +1,42 @@
+﻿@model Book
+
+<div class="card">
+
+    <div style="background-color:#EFFFFB" class="card-header">
+        <h1>Kitap Ekleme Sayfası</h1>
+    </div>
+
+    <div class="card-body" style="background-color:#FAEEE0">
+
+        <form asp-controller="book" asp-action="Addbook" method="post">
+
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div asp-validation-summary="All" class="alert alert-danger"></div>
+            }
+
+            <div>
+                <label class="form-label">Kitabın Adı</label>
+                <input style="background-color:#CCF2F4" type="text" asp-for="BookName" class="form-control"/>
+            </div>
+            <div>
+                <label class="form-label">Kitabın Yazarı</label>
+                <input style="background-color:#CCF2F4" type="text" asp-for="Author" class="form-control" />
+            </div>
+            <div>
+                <label class="form-label">Sayfa Sayısı</label>
+                <input style="background-color:#CCF2F4" type="text" type="number" asp-for="NumberofPages" class="form-control" />
+            </div>
+            <div>
+                <label class="form-label">Basım Yılı</label>
+                <input style="background-color:#CCF2F4" type="text" type="number" asp-for="YearofPublication" class="form-control" />
+            </div>
+
+            <input type="submit" value="Kaydı Tamamla" class="btn btn-primary mt-3" />
+            
+
+        </form>
+
+    </div>
+
+</div>

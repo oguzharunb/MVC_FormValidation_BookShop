@@ -1,0 +1,37 @@
+﻿
+
+
+<div class="card">
+
+    <div class="card-header" style="background-color:#C3B091">
+        <h2>Kitap Listesi</h2>
+    </div>
+
+    <div class="card-body" style="background-color:#F0ECE3">
+
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <td>Kitabın adı</td>
+                    <td>Kitabın yazarı</td>
+                    <td>Sayfa sayısı</td>
+                    <td>Basım tarihi</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Repository.BookList)
+                {
+                <tr>
+                    <td>@item.BookName</td>
+                    <td>@item.Author</td>
+                    <td>@item.NumberofPages</td>
+                    <td>@item.YearofPublication</td>
+                </tr>    
+                }
+            </tbody>
+        </table>
+        <a asp-controller="book" asp-action="addbook" class="text-dark">Kayıt sayfasına dönmek için tıklayınız</a>
+    </div>
+</div>
